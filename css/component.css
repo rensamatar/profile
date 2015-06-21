@@ -6,9 +6,23 @@
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon/icomoon.eot?-ee0u0f');
 	src:url('../fonts/icomoon/icomoon.eot?#iefix-ee0u0f') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.woff?-ee0u0f') format('woff'),
-		url('../fonts/icomoon/icomoon.ttf?-ee0u0f') format('truetype'),
-		url('../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon') format('svg');
+	url('../fonts/icomoon/icomoon.woff?-ee0u0f') format('woff'),
+	url('../fonts/icomoon/icomoon.ttf?-ee0u0f') format('truetype'),
+	url('../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon') format('svg');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -199,18 +213,24 @@ a:hover, a:focus {
 button.trigger {
 	position: fixed;
 	bottom: 40px;
-	left: 50%;
+	left: 48.8%;
 	z-index: 5000;
 	display: block;
 	margin-left: -0.5em;
 	padding: 0;
-	width: 1em;
-	height: 1em;
-	border: none;
 	background: transparent;
 	color: transparent;
 	font-size: 2em;
 	cursor: pointer;
+
+	width: 30px;
+	height: 48px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	border: 2px solid #fff;
+	border-radius: 23px;
 }
 
 .container:not(.notrans) button.trigger {
@@ -250,8 +270,8 @@ button.trigger span {
 	height: 100%;
 }
 
-button.trigger span::before {
-	position: absolute;
+	button.trigger span::before {
+	/*position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -264,9 +284,100 @@ button.trigger span::before {
 	font-variant: normal;
 	font-family: 'icomoon';
 	line-height: 1;
-	speak: none;
+	speak: none;*/
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	position: absolute;
+	top: 29%;
+	left: 48%;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	display: inline-block;
+	content: "\e097";
+	letter-spacing: 1px;
+	color: #fff;
+	display: block;
+	speak: none;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	-webkit-animation: ani-mouse 2s linear infinite;
+	-moz-animation: ani-mouse 2s linear infinite;
+	animation: ani-mouse 2s linear infinite;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Mouse animate */
+@-webkit-keyframes ani-mouse {
+	0% {
+		top: 29%;
+		opacity: 1;
+	}
+	15% {
+		top: 50%;
+		opacity: 1;
+	}
+	40% {
+		top: 50%;
+		opacity: 0;
+	}
+	45% {
+		top: 29%;
+		opacity: 0;
+	}
+	46% {
+		top: 29%;
+		opacity: 1;
+	}
+}
+@-moz-keyframes ani-mouse {
+	0% {
+		top: 29%;
+		opacity: 1;
+	}
+	15% {
+		top: 50%;
+		opacity: 1;
+	}
+	40% {
+		top: 50%;
+		opacity: 0;
+	}
+	45% {
+		top: 29%;
+		opacity: 0;
+	}
+	46% {
+		top: 29%;
+		opacity: 1;
+	}
+}
+@keyframes ani-mouse {
+	0% {
+		top: 29%;
+		opacity: 1;
+	}
+	15% {
+		top: 50%;
+		opacity: 1;
+	}
+	40% {
+		top: 50%;
+		opacity: 0;
+	}
+	45% {
+		top: 29%;
+		opacity: 0;
+	}
+	46% {
+		top: 29%;
+		opacity: 1;
+	}
 }
 
 /* Content */
@@ -462,3 +573,69 @@ button.trigger span::before {
 		display: none;
 	}
 }
+
+/* Social */
+
+.social-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.social-links::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 2px;
+	height: 100%;
+	margin-left: -1px;
+	background: #ddd;
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
+}
+
+.social-icon {
+	display: inline-block;
+	width: 1.5em;
+	margin: .5em;
+	padding: 0em 0;
+	text-decoration: none;
+}
+
+.social-icon span {
+	display: none;
+}
+
+.social-links #facebook a:hover,
+.social-links #facebook a:focus  {
+	color: #3b5998;
+}
+
+.social-icon:before {
+	font-family: 'icomoon';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	margin: 0 5px;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+}
+
+.icon-google-plus3:before {
+	content: "\ea8a";
+}
+.icon-facebook3:before {
+	content: "\ea8e";
+}
+.icon-twitter3:before {
+	content: "\ea93";
+}
+.icon-github4:before {
+	content: "\eab4";
+}
+
+
